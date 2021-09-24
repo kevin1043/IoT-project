@@ -1,51 +1,3 @@
-//#include <SoftwareSerial.h>
-////    SoftwareSerial s1(2,3);
-////
-////
-////    void setup() {
-////    s1.begin(9600);
-////    Serial.begin(9600);
-////    }
-////    void loop() {
-////
-//////    s.write("s");
-////    if (s1.available()>0)
-////    {
-////   float data=s1.read();
-////    Serial.println(data);
-////    }
-////     delay(1000);
-////   }
-//SoftwareSerial mySerial(3,2); // RX, TX
-//
-//void setup() {
-//  // Open serial communications and wait for port to open:
-//  Serial.begin(115200);
-//  while (!Serial) {
-//    ; // wait for serial port to connect. Needed for native USB port only
-//  }
-//
-//
-//  Serial.println("2");
-//
-//  // set the data rate for the SoftwareSerial port
-//  mySerial.begin(115200);
-//  mySerial.println("2 UNO");
-//}
-//
-//void loop() { // run over and over
-//  if (mySerial.available()) {
-//    Serial.write(mySerial.read());
-//  }
-//  if (Serial.available()) {
-//    mySerial.write(Serial.read());
-//  }
-//}
-//ThatsEngineering
-//Sending Data from Arduino to NodeMCU Via Serial Communication
-//NodeMCU code
-
-//Include Lib for Arduino to Nodemcu
 #include <SoftwareSerial.h>
 #include <ArduinoJson.h>
 #include <Firebase.h>
@@ -58,10 +10,10 @@
 #include <ESP8266WiFi.h>
 //D6 = Rx & D5 = Tx
 SoftwareSerial nodemcu(D6, D5);
-#define FIREBASE_HOST "thermal-setup-304113-default-rtdb.firebaseio.com"
-#define FIREBASE_AUTH "Xegn2X9SVrS3WGCvOk3uEt1FTrlT8pE4mO3TIrnI"
-#define WIFI_SSID "Kvin"
-#define WIFI_PASSWORD "87654321"
+#define FIREBASE_HOST "********.firebaseio.com"
+#define FIREBASE_AUTH "**************************************"
+#define WIFI_SSID "WiFi name"
+#define WIFI_PASSWORD "WiFi password"
 
 
 void setup() {
